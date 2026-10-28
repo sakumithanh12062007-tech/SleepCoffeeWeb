@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    
+</head>
+<body>
+    <div id="login">
+        <button type="button" id="btnThoat" class="btn-thoat">&times;</button>
+    
+        <!-- FORM ĐĂNG NHẬP -->
+        <div id="formDangNhap">
+            <h1>Đăng Nhập</h1>
+    
+            <div class="logo">
+                <span class="titan">Sleep</span>
+                <span class="motors">Coffee</span>
+            </div>
+    
+            <form id="loginForm">
+                <div class="gr">
+                    <label for="username">Tài Khoản</label>
+                    <input type="text" id="username" placeholder="User..." required>
+                </div>
+    
+                <div class="gr">
+                    <label for="password">Mật Khẩu</label>
+                    <input type="password" id="password" placeholder="Password..." required>
+                </div>
+    
+                <p id="error" style="color:red;"></p>
+                <p id="success" style="color:green;"></p>
+    
+                <div class="signin-redirect">
+                    <button type="submit">Đăng Nhập</button>
+                </div>
+            </form>
+    
+            <p class="register-link">
+                Chưa có tài khoản?
+                <a href="#" id="btnDangKy">Đăng ký ngay</a>
+            </p>
+        </div>
+    
+        <!-- FORM ĐĂNG KÝ -->
+        <div id="formDangKy" style="display:none;">
+            <h1>Đăng Ký</h1>
+    
+            <div class="logo">
+                <span class="titan">Sleep</span>
+                <span class="motors">Coffee</span>
+            </div>
+    
+            <form id="registerForm">
+                <div class="gr">
+                    <label for="regUsername">Tài Khoản</label>
+                    <input type="text" id="regUsername"
+                           placeholder="Nhập tài khoản" required>
+                </div>
+    
+                <div class="gr">
+                    <label for="regPassword">Mật Khẩu</label>
+                    <input type="password" id="regPassword"
+                           placeholder="Nhập mật khẩu" required>
+                </div>
+    
+                <div class="gr">
+                    <label for="regConfirm">Xác Nhận Mật Khẩu</label>
+                    <input type="password" id="regConfirm"
+                           placeholder="Nhập lại mật khẩu" required>
+                </div>
+    
+                <p id="regError" style="color:red;"></p>
+                <p id="regSuccess" style="color:green;"></p>
+    
+                <div class="signin-redirect">
+                    <button type="submit">Tạo Tài Khoản</button>
+                </div>
+            </form>
+    
+            <p class="register-link">
+                Đã có tài khoản?
+                <a href="#" id="btnQuayLai">Đăng nhập</a>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="menu">
+             <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="">Sản Phẩm</a>
+                    <ul id="dm">                            
+                    </ul>
+                </li>
+                <li><a href="gioithieu.html">Giới Thiệu</a></li>
+                <li><a href="cart.html">Giỏ Hàng</a></li>
+                <li><a href="#" id="btnLogin">Đăng Nhập</a></li>
+             </ul>
+        </div>
+        <div class="row">
+            <div class="banner1">
+                <img src="images/banner1.jpg" alt="" id="banner">
+                <i class="fa-solid fa-angle-left btn-left vitri1" onclick="left()"></i>
+                <i class="fa-solid fa-angle-right btn-right vitri2" onclick="right()"></i>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h1>Tất Cả Sản Phẩm</h1>
+        </div>
+        <div class="row" id="show">
+          
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h1>Cà Phê </h1>
+        </div>
+        <div class="row" id="CaPhe">
+          
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h1>Nước Ép</h1>
+        </div>
+        <div class="row" id="Nuocep">
+          
+        </div>
+    </div>
+     <div class="container">
+        <div class="row">
+            <h1>Trà</h1>
+        </div>
+        <div class="row" id="Tra">
+          
+        </div>
+    </div>
+     <footer class="footer">
+                <div class="footer-container">
+                    
+                    <div class="footer-column">
+                        <h2>Về tôi</h2>
+                        <ul>
+                            <li><a href="#">Điều khoản sử dụng</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Hướng dẫn thanh toán trả góp</a></li>
+                        </ul>
+                    </div>
+
+                    
+                    <div class="footer-column">
+                        <h2>Hỗ trợ khách hàng</h2>
+                        <ul>
+                            <li><a href="#">Các câu hỏi thường gặp</a></li>
+                            <li><a href="#">Hướng dẫn đặt hàng</a></li>
+                            <li><a href="#">Chính sách đổi trả</a></li>
+                        </ul>
+                    </div>
+                 
+
+                    <div class="footer-column">
+                        <h2>Phương thức thanh toán</h2>
+                        <ul>
+                            <li><a href="#">Visa</a></li>
+                            <li><a href="#">Momo</a></li>
+                            <li><a href="#">Ngân hàng</a></li>
+                        </ul>
+                    </div>
+
+                    
+                    <div class="footer-column">
+                        <h2>Kết nối với tôi</h2>
+                        <ul>
+                            <li><a href="#">Tên: Lê Nguyễn Phương Uyên</a></li>
+                            <li><a href="#">Lớp: 25CDTKW01</a></li>
+                            <li><a href="#">MSSV: 2530140005</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+     <script>
+        var arr =['images/Banner1.jpg','images/Banner2.jpg','images/Banner4.jpg'];
+       let nut = arr.length;
+
+        let i = 0;
+        function left() {
+            i--;
+            if (i < 0) { i = arr.length - 1; }
+            document.getElementById('banner').src = arr[i];
+        }
+        function right() {
+            i++;
+            if (i == arr.length) { i = 0; }
+            document.getElementById('banner').src = arr[i];
+        }
+        setInterval(right, 3000);
+
+    </script>
+    <script src="js/ds.js"></script>
+    <script src="js/product.js"></script>
+    <script>
+        for (let i = 0; i < dm.length; i++) {
+            document.getElementById("dm").innerHTML += 
+            `<li><a href="">${dm[i]}</a></li>`
+            
+        }
+        
+    </script>
+   <script>
+    function detail(i) {
+        window.location.href = `detail.html?id=${ds[i].id}` // chuyển sang trang detail.html
+    }
+
+</script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+    
+        // Mở form đăng nhập từ menu
+        $("#btnLogin").click(function (e) {
+            e.preventDefault();
+            $("#login").show();
+            $("#formDangNhap").show();
+            $("#formDangKy").hide();
+        });
+    
+        // Thoát form
+        $("#btnThoat").click(function () {
+            $("#login").hide();
+            $("#loginForm, #registerForm")[0].reset();
+            $("#error, #success, #regError, #regSuccess").text("");
+        });
+    
+        // Chuyển sang form đăng ký
+        $("#btnDangKy").click(function (e) {
+            e.preventDefault();
+            $("#formDangNhap").hide();
+            $("#formDangKy").show();
+        });
+    
+        // Quay lại form đăng nhập
+        $("#btnQuayLai").click(function (e) {
+            e.preventDefault();
+            $("#formDangKy").hide();
+            $("#formDangNhap").show();
+        });
+    
+        // Danh sách tài khoản mẫu trong bộ nhớ trình duyệt
+        let taiKhoan = JSON.parse(localStorage.getItem("taiKhoanTitan")) || [
+            { username: "tam", password: "123" }
+        ];
+    
+        // Đăng ký tài khoản
+        $("#registerForm").submit(function (e) {
+            e.preventDefault();
+    
+            let user = $("#regUsername").val().trim();
+            let pass = $("#regPassword").val();
+            let confirm = $("#regConfirm").val();
+    
+            $("#regError, #regSuccess").text("");
+    
+            if (user.length < 4) {
+                $("#regError").text("Tài khoản phải có ít nhất 4 ký tự!");
+            } else if (pass.length < 6) {
+                $("#regError").text("Mật khẩu phải có ít nhất 6 ký tự!");
+            } else if (pass !== confirm) {
+                $("#regError").text("Mật khẩu xác nhận không khớp!");
+            } else if (taiKhoan.some(tk => tk.username === user)) {
+                $("#regError").text("Tài khoản đã tồn tại!");
+            } else {
+                taiKhoan.push({ username: user, password: pass });
+                localStorage.setItem("taiKhoanTitan", JSON.stringify(taiKhoan));
+    
+                $("#regSuccess").text("Đăng ký thành công!");
+    
+                setTimeout(function () {
+                    $("#registerForm")[0].reset();
+                    $("#formDangKy").hide();
+                    $("#formDangNhap").show();
+                    $("#username").val(user);
+                    $("#regSuccess").text("");
+                }, 1000);
+            }
+        });
+    
+        // Đăng nhập
+        $("#loginForm").submit(function (e) {
+            e.preventDefault();
+    
+            let user = $("#username").val().trim();
+            let pass = $("#password").val();
+    
+            $("#error, #success").text("");
+    
+            let hopLe = taiKhoan.some(function (tk) {
+                return tk.username === user && tk.password === pass;
+            });
+    
+            if (hopLe) {
+                $("#success").text("Đăng nhập thành công!");
+    
+                setTimeout(function () {
+                    window.location.href = "index.html";
+                }, 1000);
+            } else {
+                $("#error").text("Tài khoản hoặc mật khẩu không chính xác!");
+            }
+        });
+    
+    });
+    </script>
+
+</body>
+</html>

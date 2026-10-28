@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="menu">
+             <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="">Sản Phẩm</a>
+                    <ul id="dm">                            
+                    </ul>
+                </li>
+                <li><a href="cart.html">Giỏ Hàng</a></li>
+             </ul>
+        </div>
+      
+    </div>
+
+    <div class="container">
+        <div class="row"><h1>Thông Tin Giỏ Hàng</h1></div>
+        <div class="row">
+            <table border="1">
+                <tr>
+                    <th>STT</th>
+                    <th>TÊN SẢN PHẨM</th>
+                    <th>Hình</th>
+                    <th>Số Lượng</th>
+                    <th>Đơn giá</th>
+                    <th>Thành Tiền</th>
+                    <th>Thao Tác</th>
+                </tr>
+                <tbody id="addCart"></tbody>
+                
+                <tr>
+                    <td> Tổng Thành Tiền</td>
+                    <td colspan="5" id="tongtien"></td>
+                    <td>THANH TOÁN</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <h1>SẢN PhẨM KHUYẾN MÃI</h1>
+        </div>
+        <div class="row" id="productAll">
+          
+        </div>
+    </div>
+
+     <footer class="footer">
+                <div class="footer-container">
+                    
+                    <div class="footer-column">
+                        <h2>Về tôi</h2>
+                        <ul>
+                            <li><a href="#">Điều khoản sử dụng</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Hướng dẫn thanh toán trả góp</a></li>
+                        </ul>
+                    </div>
+
+                    
+                    <div class="footer-column">
+                        <h2>Hỗ trợ khách hàng</h2>
+                        <ul>
+                            <li><a href="#">Các câu hỏi thường gặp</a></li>
+                            <li><a href="#">Hướng dẫn đặt hàng</a></li>
+                            <li><a href="#">Chính sách đổi trả</a></li>
+                        </ul>
+                    </div>
+                 
+
+                    <div class="footer-column">
+                        <h2>Phương thức thanh toán</h2>
+                        <ul>
+                            <li><a href="#">Visa</a></li>
+                            <li><a href="#">Momo</a></li>
+                            <li><a href="#">Ngân hàng</a></li>
+                        </ul>
+                    </div>
+
+                    
+                    <div class="footer-column">
+                        <h2>Kết nối với tôi</h2>
+                        <ul>
+                            <li><a href="#">Tên: Lê Nguyễn Phương Uyên</a></li>
+                            <li><a href="#">Lớp: 25CDTKW01</a></li>
+                            <li><a href="#">MSSV: 2530140005</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+     <script>
+        var arr =['images/Banner1.jpg','images/Banner2.jpg','images/Banner4.jpg'];
+        let nut = arr.length;
+
+        for (let i = 1; i <= nut; i++) {
+            document.getElementById("showbtn").innerHTML +=
+            `<div class="btn1">${i}</div>`
+        }
+        let i = 0;
+        function left(){
+            i--;
+            if (i<0 ){i=arr.length-1;}
+            document.getElementById('banner').src=arr[i];
+        }
+        function right(){
+            i++;
+            if (i == arr.length ){i=0;}
+            document.getElementById('banner').src=arr[i];
+        }
+        setInterval(right,3000);
+
+    </script>
+    <script src="js/ds.js"></script>
+    <script src="js/cart.js"></script>
+    
+    <script>
+        for (let i = 0; i < dm.length; i++) {
+            document.getElementById("dm").innerHTML += 
+            `<li><a href="">${dm[i]}</a></li>`
+            
+        }
+        
+    </script>
+   <script>
+    function detail(i) {
+        window.location.href = `detail.html?id=${ds[i].id}` // chuyển sang trang detail.html
+    }
+
+</script>
+</body>
+</html>

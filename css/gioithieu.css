@@ -1,0 +1,445 @@
+  /* ===== CẤU HÌNH CHUNG ===== */
+  :root {
+      --primary: rgb(245, 189, 105);
+      --dark: #303642;
+      --white: #ffffff;
+      --light: #f5f5f5;
+      --text: #333333;
+  }
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  html {
+      scroll-behavior: smooth;
+  }
+
+  body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background-color: rgb(181, 169, 153);
+  }
+
+  .menu {
+    background-color: rgb(143, 100, 36);
+      width: 100%;
+      height: 50px;
+      text-align: center;
+  }
+
+  .row {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .menu a{
+    text-decoration: none;
+    color:rgb(26, 26, 26);
+    font-weight: bold;
+}
+
+  .menu ul {
+      display: flex;
+    text-align: center;
+  }
+
+  .menu li {
+      list-style: none;
+      padding: 10px;
+      display: inline-block;
+      width: 120px;
+      height: 30px;
+      line-height: 30px;
+  }
+
+  .menu ul li {
+      position: relative;
+
+  }
+
+  .menu ul ul {
+      display: none;
+      z-index: 30;
+  }
+
+  .menu ul li:hover ul {
+    background-color: rgb(143, 100, 36);
+      display: block;
+      position: absolute;
+      top: 40px;
+      width: 120px;
+      padding: 0%;
+      margin: 0%;
+  }
+
+  a {
+      text-decoration: none;
+      color: inherit;
+  }
+
+  img {
+      display: block;
+      max-width: 100%;
+  }
+
+  .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+  }
+
+  
+  .banner1{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    display:flex;
+ }
+ .banner1 img{
+    width: 100%;
+    height: 100%;
+ }
+
+.menu-doc ul {
+    flex-direction: column;
+}
+
+.menu-doc li{
+    display: inline-flex;
+    /* background-color: rgb(255, 166, 0); */
+    padding: 10px;
+    list-style: none;
+}
+.col3{
+    width: calc(25% - 10px);
+    box-sizing: border-box;
+    margin: 5px;
+}
+button{
+    height: 30px;
+    text-align: center;
+    background-color: rgb(157, 127, 82);
+    cursor: pointer;
+    border: 2px solid rgb(143, 100, 36);
+}
+.m3 img{
+    height: 190px;
+    text-align: center;
+    max-width: 100%;
+}
+.left{
+    width: calc(75% - 10px);
+    margin-right: 10px;
+    height: 470px;
+   
+    text-align: center;
+}
+.left img{
+    height: 350px;
+}
+.right{
+    width: 25%;
+    height: 470px;
+  
+}
+
+  /* ===== THÔNG TIN NHANH ===== */
+  .stats {
+    background-color: rgb(143, 100, 36);
+      color: var(--white);
+      padding: 30px 0;
+  }
+
+  .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+  }
+
+  .stat-item h2 {
+      font-size: 30px;
+      color: var(--primary);
+  }
+
+  .stat-item p {
+      font-size: 14px;
+      color: #dddddd;
+  }
+
+  /* ===== TIÊU ĐỀ SECTION ===== */
+  .section {
+      padding: 85px 0;
+  }
+
+  .section-heading {
+      text-align: center;
+      margin-bottom: 45px;
+  }
+
+  .section-heading .subtitle {
+      color: var(--white);
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+  }
+
+  .section-heading h2 {
+      color: var(--dark);
+      font-size: clamp(28px, 4vw, 38px);
+      margin: 10px 0;
+  }
+
+  .section-heading p {
+      max-width: 650px;
+      margin: auto;
+      color: #666666;
+  }
+
+  /* ===== XE NỔI BẬT ===== */
+  .cars-section {
+      background-color: var(--light);
+  }
+
+  .cars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+  }
+
+  .car-card {
+      background-color: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+      transition: 0.3s;
+  }
+
+  .car-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13);
+  }
+
+  .car-image {
+      position: relative;
+      overflow: hidden;
+  }
+
+  .car-image img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: 0.4s;
+  }
+
+  .car-card:hover .car-image img {
+      transform: scale(1.05);
+  }
+
+  .car-label {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: rgb(157, 127, 82);;
+      color: var(--white);
+      font-size: 12px;
+      font-weight: bold;
+      padding: 6px 10px;
+  }
+
+  .car-info {
+      padding: 23px;
+  }
+
+  .car-info h3 {
+      color: var(--dark);
+      font-size: 21px;
+      margin-bottom: 10px;
+  }
+
+  .car-info p {
+      color: #666666;
+      font-size: 14px;
+      margin-bottom: 18px;
+  }
+
+  .car-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      border-top: 1px solid #eeeeee;
+      padding-top: 16px;
+  }
+
+  .car-price {
+      color: #b66c00;
+      font-size: 14px;
+      font-weight: bold;
+  }
+
+  .car-link {
+    background-color: rgb(157, 127, 82);
+      color: var(--white);
+      padding: 9px 13px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+  }
+
+  .car-link:hover {
+    background-color: rgb(157, 127, 82);
+      color: var(--dark);
+  }
+
+  /* ===== VỀ TITAN MOTORS ===== */
+  .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
+  }
+
+  .about-image img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 8px;
+  }
+
+  .about-content .subtitle {
+      color: #b66c00;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 13px;
+  }
+
+  .about-content h2 {
+      color: var(--dark);
+      font-size: 36px;
+      line-height: 1.25;
+      margin: 15px 0 20px;
+  }
+
+  .about-content>p {
+      color: #666666;
+      margin-bottom: 20px;
+  }
+
+  .feature {
+      display: flex;
+      gap: 15px;
+      margin: 22px 0;
+      align-items: flex-start;
+  }
+
+  .feature-icon {
+      min-width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary);
+      border-radius: 6px;
+      font-size: 21px;
+  }
+
+  .feature h3 {
+      color: var(--dark);
+      font-size: 17px;
+      margin-bottom: 5px;
+  }
+
+  .feature p {
+      color: #666666;
+      font-size: 14px;
+  }
+
+ 
+
+
+  .cta {
+      background-color: var(--dark);
+      padding: 65px 0;
+      text-align: center;
+      color: var(--white);
+  }
+
+  .cta h2 {
+      color: var(--white);
+      font-size: clamp(27px, 4vw, 38px);
+      margin-bottom: 15px;
+      
+  }
+
+  .cta p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+     color: var(--white);
+  }
+
+  .footer {
+    background-color: rgb(143, 100, 36);
+    color: black;
+    font-weight: bold;
+    padding: 60px 20px;
+    width: 100%;
+    height: 200px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+.footer-column {
+    text-align: right;
+    flex: 1;
+    min-width: 200px;
+}
+
+
+.footer-column h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+
+.footer-column ul li a {
+    color: white; 
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào link */
+.footer-column ul li a:hover {
+    color: #FFFFFF;
+}
+
+
